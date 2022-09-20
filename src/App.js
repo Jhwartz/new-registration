@@ -1,12 +1,17 @@
-import React from 'react'
-import Home from './screens/Home'
-import Register from './screens/Register'
-import Login from './screens/Login'
+import React from "react";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import { Route, Routes } from "react-router-dom";
+import Home from "./screens/Home"
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
